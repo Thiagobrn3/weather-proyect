@@ -57,3 +57,4 @@ def pronostico(lat: float, lon: float, dias: int = 7, idioma: str = "es") -> Dic
 def texto_weathercode(code: Optional[int]) -> str:
     if code is None:
         return ""
+    return WEATHERCODE_ES.get(int(code), f"Código {code}")
